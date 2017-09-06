@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/root/mqtt/pub.py", line 6, in <module>
+    client.connect(broker)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 760, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 887, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
+    raise err
+socket.error: [Errno 101] Network is unreachable

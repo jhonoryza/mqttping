@@ -1,0 +1,16 @@
+[Unit]
+Description=Mqtt Ping Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=root
+Group=root
+WorkingDirectory=/root/mqtt
+ExecStart=/usr/bin/python /root/mqtt/pub.py
+
+[Install]
+WantedBy=multi-user.target
